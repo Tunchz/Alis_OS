@@ -2054,4 +2054,5 @@
         }
     }])
 });
+
 //# sourceMappingURL=socket.io.js.map
