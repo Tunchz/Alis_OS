@@ -28,9 +28,9 @@ function updateChart(e) {
 function callOnClick(e) {
     console.log(e)
 }
-//var socket = io();
+var socket = io();
 
-var socket = io("https://public.os.alis.fund");
+//var socket = io("https://public.os.alis.fund");
 //var socket = io.connect("https://public.os.alis.fund");
 socket.on("connect", function() {
     console.log("Connected to server!");
