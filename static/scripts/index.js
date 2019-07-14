@@ -36,7 +36,7 @@ socket.on("connect", function() {
         domain: e[0] ? e[0] : "all",
         limit: e[1] ? e[1] : 777
     }, function(e) {
-        e ? (alert(e), window.location.href = "/") : console.log("Joined")
+        e ? (alert(e), window.location.href = "/ตรวจสอบ") : console.log("Joined")
     })
 }), socket.on("change", function(e) {
     updateChart(e)
