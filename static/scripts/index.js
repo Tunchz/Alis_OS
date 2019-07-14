@@ -31,7 +31,7 @@ function callOnClick(e) {
 var socket = io();
 socket.on("connect", function() {
     console.log("Connected to server!");
-    var e = "https://public.os.alis.fund";  //location.pathname.split("/").filter(e => "" !== e);
+    var e = location.pathname.split("/").filter(e => "" !== e);
     socket.emit("join", {
         domain: e[0] ? e[0] : "all",
         limit: e[1] ? e[1] : 777
