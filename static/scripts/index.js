@@ -28,7 +28,8 @@ function updateChart(e) {
 function callOnClick(e) {
     console.log(e)
 }
-var socket = io();
+//var socket = io();
+var socket = io.connect("https://public.os.alis.fund:1235");
 socket.on("connect", function() {
     console.log("Connected to server!");
     var e = location.pathname.split("/").filter(e => "" !== e);
