@@ -68,3 +68,4 @@ function getTimeFrame(e) {
 d3.select(window).on("resize", function() {
     window.innerWidth !== current_width && (current_width = window.innerWidth, w = document.documentElement.clientWidth, h = document.documentElement.clientHeight, size = Math.min(1400, Math.max(w, h)), alisVisual.width(size).height(size).resize())
 });
+
