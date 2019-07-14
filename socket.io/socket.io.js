@@ -598,7 +598,7 @@
 
         function r(t, e) {
             if (!(this instanceof r)) return new r(t, e);
-            t && "object" === ("undefined" == typeof t ? "undefined" : o(t)) && (e = t, t = void 0), e = e || {}, e.path = /*e.path || "/socket.io"*/"https://public.os.alis.fund/socket.io", this.nsps = {}, this.subs = [], this.opts = e, this.reconnection(e.reconnection !== !1), this.reconnectionAttempts(e.reconnectionAttempts || 1 / 0), this.reconnectionDelay(e.reconnectionDelay || 1e3), this.reconnectionDelayMax(e.reconnectionDelayMax || 5e3), this.randomizationFactor(e.randomizationFactor || .5), this.backoff = new l({
+            t && "object" === ("undefined" == typeof t ? "undefined" : o(t)) && (e = t, t = void 0), e = e || {}, e.path = e.path || "/socket.io"/*"https://public.os.alis.fund/socket.io"*/, this.nsps = {}, this.subs = [], this.opts = e, this.reconnection(e.reconnection !== !1), this.reconnectionAttempts(e.reconnectionAttempts || 1 / 0), this.reconnectionDelay(e.reconnectionDelay || 1e3), this.reconnectionDelayMax(e.reconnectionDelayMax || 5e3), this.randomizationFactor(e.randomizationFactor || .5), this.backoff = new l({
                 min: this.reconnectionDelay(),
                 max: this.reconnectionDelayMax(),
                 jitter: this.randomizationFactor()
@@ -777,8 +777,8 @@
                 hostname: n.hostname || this.hostname,
                 port: n.port || this.port,
                 secure: n.secure || this.secure,
-                //path: n.path || this.path,
-                path: this.path,
+                path: n.path || this.path,
+                //path: this.path,
                 forceJSONP: n.forceJSONP || this.forceJSONP,
                 jsonp: n.jsonp || this.jsonp,
                 forceBase64: n.forceBase64 || this.forceBase64,
